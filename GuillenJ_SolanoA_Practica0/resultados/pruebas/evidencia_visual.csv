@@ -1,0 +1,13 @@
+prueba,version,referencia,filtro,mascara,ancho,alto,hilos_bloque,error_max,error_medio,tolerancia,resultado
+evidencia_visual,python_secuencial,cpp_secuencial,media,3,4000,4000,NA,0.000e+00,0.000e+00,2.736e-04,OK
+evidencia_visual,cuda_c,cpp_secuencial,media,3,4000,4000,256,6.104e-05,1.253e-06,2.736e-04,OK
+evidencia_visual,pycuda,cpp_secuencial,media,3,4000,4000,256,6.104e-05,1.253e-06,2.736e-04,OK
+evidencia_visual,pycuda,cuda_c,media,3,4000,4000,256,0.000e+00,0.000e+00,2.736e-04,OK
+evidencia_visual,python_secuencial,cpp_secuencial,nitidez,3,4000,4000,NA,0.000e+00,0.000e+00,2.462e-03,OK
+evidencia_visual,cuda_c,cpp_secuencial,nitidez,3,4000,4000,256,0.000e+00,0.000e+00,2.462e-03,OK
+evidencia_visual,pycuda,cpp_secuencial,nitidez,3,4000,4000,256,0.000e+00,0.000e+00,2.462e-03,OK
+evidencia_visual,pycuda,cuda_c,nitidez,3,4000,4000,256,0.000e+00,0.000e+00,2.462e-03,OK
+evidencia_visual,python_secuencial,cpp_secuencial,laplaciano,3,4000,4000,NA,0.000e+00,0.000e+00,2.189e-03,OK
+evidencia_visual,cuda_c,cpp_secuencial,laplaciano,3,4000,4000,256,0.000e+00,0.000e+00,2.189e-03,OK
+evidencia_visual,pycuda,cpp_secuencial,laplaciano,3,4000,4000,256,0.000e+00,0.000e+00,2.189e-03,OK
+evidencia_visual,pycuda,cuda_c,laplaciano,3,4000,4000,256,0.000e+00,0.000e+00,2.189e-03,OK

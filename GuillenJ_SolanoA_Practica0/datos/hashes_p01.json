@@ -1,0 +1,9 @@
+{
+  "descripcion": "SHA-256 de las imagenes de P01 (tag practica01-entrega). Se comprueban al inicio de cada ejecucion; no se regeneran.",
+  "sha256": {
+    "GuillenJ_SolanoA_Practica0/datos/base_2000.pgm": "4defe62fe65e814e374b6d553f58e51470ccea9081ea1563f81333f272405f12",
+    "GuillenJ_SolanoA_Practica0/datos/base_4000.pgm": "4087e73c305e024ef21bba7a902e05526971c23f057625d9d9e608fcf4d3c87a",
+    "GuillenJ_SolanoA_Practica0/datos/base_6000.pgm": "d2f7a902df7edd5a9fb701b97f19794d398f48df478bf83c835dbec28f95a898",
+    "GuillenJ_SolanoA_Practica0/datos/no_multiplo_1013x757.pgm": "bf760f72320bc76090d0c115b4cc6a85bc9dc1cbe03ab9507bf7905c1ebb62ba"
+  }
+}

@@ -1,0 +1,13 @@
+# Firmas escaneadas: solo se usan localmente para generar el informe
+GuillenJ_SolanoA_Practica03/informe/recursos/firmas/
+
+# Entornos virtuales y cachés
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Archivos temporales de Office y del sistema
+~$*
+Thumbs.db
+desktop.ini

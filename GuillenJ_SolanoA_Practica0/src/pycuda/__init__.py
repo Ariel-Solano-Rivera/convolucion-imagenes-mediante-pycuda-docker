@@ -1,0 +1,1 @@
+"""Implementación paralela con PyCUDA."""

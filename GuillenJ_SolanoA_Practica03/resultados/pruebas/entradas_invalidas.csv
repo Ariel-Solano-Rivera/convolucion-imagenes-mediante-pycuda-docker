@@ -1,0 +1,4 @@
+caso,http_esperado,http_obtenido,resultado,mensaje
+archivo_no_valido,400,400,OK,El archivo no es una imagen válida o no puede decodificarse.
+filtro_desconocido,400,400,OK,"El filtro debe ser media, nitidez o laplaciano."
+mascara_no_permitida,400,400,OK,"Para media se permiten máscaras 3, 9 o 21."

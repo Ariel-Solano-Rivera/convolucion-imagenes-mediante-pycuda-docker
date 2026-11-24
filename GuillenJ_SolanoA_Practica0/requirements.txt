@@ -1,0 +1,6 @@
+# Dependencias para C/CUDA, Python secuencial y PyCUDA.
+pillow==13.0.0
+numpy==2.5.4
+pycuda==2026.1
+matplotlib==3.11.2
+pytest==9.2.0

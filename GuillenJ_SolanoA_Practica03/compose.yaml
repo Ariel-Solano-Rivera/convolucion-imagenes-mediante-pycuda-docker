@@ -1,0 +1,35 @@
+services:
+  convolucion:
+    image: convolucion-pycuda:p03
+    build:
+      context: .
+      additional_contexts:
+        practica02: ../GuillenJ_SolanoA_Practica0
+      args:
+        COMMIT_PRACTICA03: ${COMMIT_PRACTICA03:-no_declarado}
+    gpus: all
+    ports:
+      - "8080:8000"
+    environment:
+      PRACTICA02_ROOT: /opt/practica02
+      RESULTADOS_PRACTICA03: /app/runtime/resultados
+      MAX_BYTES_ARCHIVO: "67108864"
+      MAX_PIXELES_ENTRADA: "170000000"
+      MAX_PIXELES: "36000000"
+      LIMITE_TRABAJOS_GPU: "2"
+      RETENCION_RESULTADOS_SEGUNDOS: "86400"
+    volumes:
+      # Resultados temporales de cada solicitud (UUID), en un volumen de Docker.
+      - salidas_servicio:/app/runtime
+      # CSV y evidencia que generan los scripts ejecutados dentro del contenedor.
+      - ./resultados:/app/resultados
+    healthcheck:
+      # /api/salud responde 503 si no hay GPU utilizable (no hay respaldo en CPU).
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/salud', timeout=5)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+volumes:
+  salidas_servicio:

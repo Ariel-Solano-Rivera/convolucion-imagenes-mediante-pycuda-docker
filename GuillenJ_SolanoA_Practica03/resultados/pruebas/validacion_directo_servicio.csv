@@ -1,0 +1,4 @@
+prueba,filtro,mascara,ancho,alto,error_max,error_medio,tolerancia,resultado,observaciones
+directo_servicio,media,3,1013,757,0.00000000e+00,0.00000000e+00,0.01,OK,solicitud=23473ff2-21b3-4efb-9bb7-94b2df0a4056
+directo_servicio,nitidez,3,1013,757,0.00000000e+00,0.00000000e+00,0.01,OK,solicitud=7ab3bf5f-e796-4941-b4cf-5fb87faa4fb4
+directo_servicio,laplaciano,3,1013,757,0.00000000e+00,0.00000000e+00,0.01,OK,solicitud=38d3044a-5ff6-4f45-8d52-9d3ee5363792

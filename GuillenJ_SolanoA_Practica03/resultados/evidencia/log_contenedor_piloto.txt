@@ -1,0 +1,71 @@
+convolucion-1  | 
+convolucion-1  | ==========
+convolucion-1  | == CUDA ==
+convolucion-1  | ==========
+convolucion-1  | 
+convolucion-1  | CUDA Version 12.9.1
+convolucion-1  | 
+convolucion-1  | Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+convolucion-1  | 
+convolucion-1  | This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+convolucion-1  | By pulling and using the container, you accept the terms and conditions of this license:
+convolucion-1  | https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+convolucion-1  | 
+convolucion-1  | A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+convolucion-1  | 
+convolucion-1  | [2026-11-24 20:47:06 +0000] [1] [INFO] Starting gunicorn 23.0.0
+convolucion-1  | [2026-11-24 20:47:06 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+convolucion-1  | [2026-11-24 20:47:06 +0000] [1] [INFO] Using worker: gthread
+convolucion-1  | [2026-11-24 20:47:06 +0000] [25] [INFO] Booting worker with pid: 25
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:11 +0000] "GET /api/salud HTTP/1.1" 200 378 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-EC) WindowsPowerShell/5.1.26100.7920"
+convolucion-1  | 127.0.0.1 - - [24/Nov/2026:20:47:11 +0000] "GET /api/salud HTTP/1.1" 200 378 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:15 +0000] "POST /api/convoluciones HTTP/1.1" 201 1312 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:15 +0000] "GET /api/resultados/80c0c8c9-5db6-48d6-9ba9-6f6447b492e9/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:15 +0000] "POST /api/convoluciones HTTP/1.1" 201 1306 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:15 +0000] "GET /api/resultados/c242da7c-79f0-45ac-8e47-2e2d629527cf/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:15 +0000] "POST /api/convoluciones HTTP/1.1" 201 1298 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:15 +0000] "GET /api/resultados/c0c213db-e17d-4fbd-b52c-87a311e70e8e/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "POST /api/convoluciones HTTP/1.1" 201 1298 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/f6e8c416-ec51-4a36-a7b3-b031be3b83c7/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/f6e8c416-ec51-4a36-a7b3-b031be3b83c7/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "POST /api/convoluciones HTTP/1.1" 201 1298 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/b7571387-6fb2-449e-bc7b-cd1edf4a87bc/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/b7571387-6fb2-449e-bc7b-cd1edf4a87bc/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "POST /api/convoluciones HTTP/1.1" 201 1304 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/6ce1ef2d-b2d0-477c-b65e-9e4540cc830f/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/6ce1ef2d-b2d0-477c-b65e-9e4540cc830f/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "POST /api/convoluciones HTTP/1.1" 201 1301 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/3edf6070-764c-43da-8506-50e3e8128026/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/3edf6070-764c-43da-8506-50e3e8128026/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "POST /api/convoluciones HTTP/1.1" 201 1302 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/f6546327-addb-4a53-bd9a-5cb9a659d2f2/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/f6546327-addb-4a53-bd9a-5cb9a659d2f2/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "POST /api/convoluciones HTTP/1.1" 201 1299 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/6404aeac-f901-4a72-9548-8173ea569bbd/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:17 +0000] "GET /api/resultados/6404aeac-f901-4a72-9548-8173ea569bbd/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "POST /api/convoluciones HTTP/1.1" 201 1300 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "GET /api/resultados/641d3766-7dce-4ab1-b727-48e36a05d2c0/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "GET /api/resultados/641d3766-7dce-4ab1-b727-48e36a05d2c0/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "POST /api/convoluciones HTTP/1.1" 201 1310 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "GET /api/resultados/37cf6fb8-94d6-4bb9-bb31-01935a00ab36/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "GET /api/resultados/37cf6fb8-94d6-4bb9-bb31-01935a00ab36/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "POST /api/convoluciones HTTP/1.1" 201 1302 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "GET /api/resultados/23473ff2-21b3-4efb-9bb7-94b2df0a4056/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:18 +0000] "GET /api/resultados/23473ff2-21b3-4efb-9bb7-94b2df0a4056/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/23473ff2-21b3-4efb-9bb7-94b2df0a4056/original.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/23473ff2-21b3-4efb-9bb7-94b2df0a4056/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "POST /api/convoluciones HTTP/1.1" 201 1302 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/7ab3bf5f-e796-4941-b4cf-5fb87faa4fb4/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/7ab3bf5f-e796-4941-b4cf-5fb87faa4fb4/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/7ab3bf5f-e796-4941-b4cf-5fb87faa4fb4/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "POST /api/convoluciones HTTP/1.1" 201 1307 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/38d3044a-5ff6-4f45-8d52-9d3ee5363792/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/38d3044a-5ff6-4f45-8d52-9d3ee5363792/resultado.npy HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/38d3044a-5ff6-4f45-8d52-9d3ee5363792/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "POST /api/convoluciones HTTP/1.1" 400 160 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "POST /api/convoluciones HTTP/1.1" 400 142 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "POST /api/convoluciones HTTP/1.1" 400 142 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "POST /api/convoluciones HTTP/1.1" 201 1302 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/66be9ab4-da20-4f3e-a149-df1eb28bbbae/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "POST /api/convoluciones HTTP/1.1" 201 1310 "-" "Python-urllib/3.12"
+convolucion-1  | 172.18.0.1 - - [24/Nov/2026:20:47:19 +0000] "GET /api/resultados/2e60f472-cc15-4d0a-b25c-d92d90b5362b/resultado.png HTTP/1.1" 200 0 "-" "Python-urllib/3.12"

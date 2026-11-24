@@ -1,0 +1,3 @@
+cliente,http,id_solicitud,resultado_url,aislamiento
+1,201,66be9ab4-da20-4f3e-a149-df1eb28bbbae,/api/resultados/66be9ab4-da20-4f3e-a149-df1eb28bbbae/resultado.npy,OK
+2,201,2e60f472-cc15-4d0a-b25c-d92d90b5362b,/api/resultados/2e60f472-cc15-4d0a-b25c-d92d90b5362b/resultado.npy,OK

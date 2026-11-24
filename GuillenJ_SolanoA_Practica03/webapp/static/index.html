@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convolución en GPU · Práctica 03</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="barra-interior">
+      <div class="marca">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.6"/><rect x="9" y="9" width="6" height="6" fill="currentColor"/></svg>
+        </span>
+        <div>
+          <strong>Convolución en GPU</strong>
+          <span>Computación Paralela · Práctica 03</span>
+        </div>
+      </div>
+      <span id="insignia-gpu" class="insignia insignia-pendiente"><span class="punto"></span>Consultando GPU…</span>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="intro">
+      <h1>Filtros de imagen procesados con PyCUDA</h1>
+      <p>Sube una imagen, elige el filtro y el servicio ejecuta el kernel propio de la práctica 02 en la GPU dentro de un contenedor Docker.</p>
+    </section>
+
+    <div class="rejilla-principal">
+      <section class="tarjeta" aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Procesar imagen</h2>
+        <form id="formulario" novalidate>
+          <label class="zona-archivo" id="zona-archivo" for="imagen">
+            <input id="imagen" name="imagen" type="file" accept="image/png,image/jpeg,image/bmp,image/x-portable-pixmap,.pgm,.ppm" required>
+            <img id="vista-previa" alt="" hidden>
+            <span class="zona-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 16V4m0 0-4 4m4-4 4 4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+            </span>
+            <span class="zona-texto" id="zona-texto"><strong>Elige una imagen</strong> o arrástrala aquí</span>
+            <span class="zona-ayuda" id="zona-ayuda">PNG, JPG, BMP, PGM o PPM · máximo 64 MiB</span>
+          </label>
+
+          <fieldset class="grupo">
+            <legend>Filtro</legend>
+            <div class="segmentos" id="filtros">
+              <label><input type="radio" name="filtro" value="media" checked><span>Media</span></label>
+              <label><input type="radio" name="filtro" value="nitidez"><span>Nitidez</span></label>
+              <label><input type="radio" name="filtro" value="laplaciano"><span>Laplaciano</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo" id="grupo-mascara">
+            <legend>Máscara <small id="nota-mascara"></small></legend>
+            <div class="segmentos" id="mascaras">
+              <label><input type="radio" name="mascara" value="3" checked><span>3 × 3</span></label>
+              <label><input type="radio" name="mascara" value="9"><span>9 × 9</span></label>
+              <label><input type="radio" name="mascara" value="21"><span>21 × 21</span></label>
+            </div>
+          </fieldset>
+
+          <button id="enviar" type="submit"><span class="giro" aria-hidden="true"></span><span id="texto-boton">Procesar en GPU</span></button>
+          <p id="estado" role="status" aria-live="polite"></p>
+          <p class="ayuda">Si la imagen supera 6000 × 6000 píxeles se toma el cuadrado central y se reduce a 6000 × 6000 antes de enviarla a la GPU.</p>
+        </form>
+      </section>
+
+      <aside class="tarjeta" aria-labelledby="titulo-equipo">
+        <h2 id="titulo-equipo">Equipo de procesamiento</h2>
+        <div class="gpu-destacada">
+          <span class="etiqueta">GPU</span>
+          <strong id="eq-gpu">—</strong>
+          <div class="chips" id="eq-chips"></div>
+        </div>
+        <dl id="equipo" class="especificaciones"></dl>
+      </aside>
+    </div>
+
+    <section id="salida" class="tarjeta" hidden aria-labelledby="titulo-salida">
+      <div class="encabezado-salida">
+        <div>
+          <h2 id="titulo-salida">Resultado</h2>
+          <p id="preparacion" class="nota"></p>
+        </div>
+        <a id="descarga" class="boton-secundario" download="resultado-convolucion.png">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0-4-4m4 4 4-4M4 20h16"/></svg>
+          Descargar PNG
+        </a>
+      </div>
+
+      <div class="metricas">
+        <div><span>Tiempo total percibido</span><strong id="tiempo-cliente">—</strong><small>Envío hasta descargar la imagen final</small></div>
+        <div><span>Procesamiento del servidor</span><strong id="tiempo-servidor">—</strong><small>Recepción, preparación, GPU y escritura</small></div>
+        <div class="destacada"><span>Trabajo en GPU</span><strong id="tiempo-gpu">—</strong><small>CPU→GPU + kernel + GPU→CPU</small></div>
+        <div><span>Espera en cola</span><strong id="tiempo-espera">—</strong><small>Antes de usar la GPU</small></div>
+      </div>
+
+      <div class="imagenes">
+        <figure><div class="marco"><img id="original" alt="Imagen original seleccionada"></div><figcaption>Original</figcaption></figure>
+        <figure id="figura-preparada"><div class="marco"><img id="preparada" alt="Entrada preparada en escala de grises"></div><figcaption id="titulo-preparada">Entrada preparada</figcaption></figure>
+        <figure><div class="marco"><img id="resultado" alt="Imagen procesada en la GPU"></div><figcaption id="titulo-resultado">Resultado</figcaption></figure>
+      </div>
+
+      <details>
+        <summary>Desglose de tiempos por fase</summary>
+        <div class="tabla-contenedor">
+          <table>
+            <thead><tr><th>Fase</th><th class="num">Tiempo</th><th>Alcance</th></tr></thead>
+            <tbody id="desglose-tiempos"></tbody>
+          </table>
+        </div>
+        <p id="detalle-gpu" class="nota"></p>
+        <p class="nota">Servidor: reloj monotónico (perf_counter). Transferencias y kernel: eventos CUDA. Cliente: reloj del navegador.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="pie">Guillén J. · Solano A. · Universidad Politécnica Salesiana</footer>
+  <script src="/aplicacion.js"></script>
+</body>
+</html>

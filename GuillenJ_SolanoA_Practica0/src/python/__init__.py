@@ -1,0 +1,1 @@
+"""Implementación secuencial en Python."""

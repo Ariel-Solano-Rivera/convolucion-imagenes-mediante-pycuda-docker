@@ -1,0 +1,64 @@
+{
+  "fecha": "2026-11-24T15:47:00-05:00",
+  "entorno": "anfitrion",
+  "equipo": {
+    "ubicacion": "Servidor local con GPU NVIDIA (sin instancia de nube)",
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "cpu": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "nucleos_logicos": 24,
+    "ram_total_gib": 31.7,
+    "python": "3.12.10",
+    "ejecutable_python": "C:\\Users\\Oficina\\Desktop\\convolucion-imagenes-mediante-pycuda-docker\\GuillenJ_SolanoA_Practica03\\.venv\\Scripts\\python.exe"
+  },
+  "gpu": {
+    "nvidia_smi": "NVIDIA GeForce RTX 3070, 8192 MiB, 596.36, 8.6",
+    "cuda_maxima_controlador": "13.2",
+    "nota": "El controlador NVIDIA pertenece al anfitrión; la imagen aporta CUDA Toolkit 12.9 (nvcc), Python y PyCUDA."
+  },
+  "software": {
+    "docker": "Docker version 28.5.1, build e180ab8",
+    "docker_servidor": "28.5.1 | Docker Desktop (containerized) | kernel 6.18.54.1-microsoft-standard-WSL2 | runtime por defecto runc | runtimes disponibles: io.containerd.runc.v2=runc nvidia=nvidia-container-runtime runc=runc",
+    "nvidia_container_toolkit": "no disponible: [WinError 2] El sistema no puede encontrar el archivo especificado",
+    "imagen_docker_p03": "sha256:c7edacbdfbdfa5ef056b41a95964a4761f8c102652296403d17faa8e5ade6982 | revision=no_declarado",
+    "imagen_base_digest": "Error response from daemon: No such image: nvidia/cuda:12.9.1-devel-ubuntu24.04",
+    "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_May_27_02:24:01_Pacific_Daylight_Time_2025\nCuda compilation tools, release 12.9, V12.9.86\nBuild cuda_12.9.r12.9/compiler.36037853_0",
+    "paquetes": {
+      "Flask": "3.1.1",
+      "gunicorn": "23.0.0",
+      "numpy": "2.5.4",
+      "Pillow": "13.0.0",
+      "pycuda": "2026.1",
+      "matplotlib": "3.11.2",
+      "pytest": "9.2.0"
+    }
+  },
+  "contenedor": {
+    "hostname": "DESKTOP-SENUA41",
+    "indicador_docker": false,
+    "imagen_base": "nvidia/cuda:12.9.1-devel-ubuntu24.04",
+    "commit_en_imagen": "HEAD-con-cambios"
+  },
+  "red": {
+    "direcciones_ip": [
+      "172.16.12.199",
+      "172.27.192.1"
+    ],
+    "puerto_contenedor": 8000,
+    "puerto_publicado_anfitrion": 8080,
+    "acceso": "http://<IP del anfitrión>:8080 (interfaz) y POST /api/convoluciones"
+  },
+  "repositorio": {
+    "commit_practica03": "HEAD-con-cambios",
+    "commit_origen_practica02": "NO_DECLARADO",
+    "arbol_limpio": false,
+    "estado_porcelain": [
+      "?? .gitignore",
+      "?? GuillenJ_SolanoA_Practica0/",
+      "?? GuillenJ_SolanoA_Practica03/",
+      "?? README.md",
+      "?? docs/"
+    ],
+    "verificacion": "git_status_local",
+    "ruta_practica02": "C:\\Users\\Oficina\\Desktop\\convolucion-imagenes-mediante-pycuda-docker\\GuillenJ_SolanoA_Practica0"
+  }
+}

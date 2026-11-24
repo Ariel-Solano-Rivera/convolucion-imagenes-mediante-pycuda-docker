@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+runtime/
+resultados/
+tests/
+README.md
+

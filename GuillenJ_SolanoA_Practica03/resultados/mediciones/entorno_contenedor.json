@@ -1,0 +1,59 @@
+{
+  "fecha": "2026-11-24T20:47:11+00:00",
+  "entorno": "contenedor",
+  "equipo": {
+    "ubicacion": "Servidor local con GPU NVIDIA (sin instancia de nube)",
+    "sistema": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "cpu": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "nucleos_logicos": 24,
+    "ram_total_gib": 15.47,
+    "python": "3.12.3",
+    "ejecutable_python": "/usr/bin/python3"
+  },
+  "gpu": {
+    "nvidia_smi": "NVIDIA GeForce RTX 3070, 8192 MiB, 596.36, 8.6",
+    "cuda_maxima_controlador": "13.2",
+    "nota": "El controlador NVIDIA pertenece al anfitrión; la imagen aporta CUDA Toolkit 12.9 (nvcc), Python y PyCUDA."
+  },
+  "software": {
+    "docker": "no disponible: [Errno 2] No such file or directory: 'docker'",
+    "docker_servidor": "no disponible: [Errno 2] No such file or directory: 'docker'",
+    "nvidia_container_toolkit": "no disponible: [Errno 2] No such file or directory: 'nvidia-container-cli'",
+    "imagen_docker_p03": "no disponible: [Errno 2] No such file or directory: 'docker'",
+    "imagen_base_digest": "no disponible: [Errno 2] No such file or directory: 'docker'",
+    "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_May_27_02:21:03_PDT_2025\nCuda compilation tools, release 12.9, V12.9.86\nBuild cuda_12.9.r12.9/compiler.36037853_0",
+    "paquetes": {
+      "Flask": "3.1.1",
+      "gunicorn": "23.0.0",
+      "numpy": "2.5.4",
+      "Pillow": "13.0.0",
+      "pycuda": "2026.1",
+      "matplotlib": "3.11.2",
+      "pytest": "9.2.0"
+    }
+  },
+  "contenedor": {
+    "hostname": "45f9fe3cbd87",
+    "indicador_docker": true,
+    "imagen_base": "nvidia/cuda:12.9.1-devel-ubuntu24.04",
+    "commit_en_imagen": "HEAD-con-cambios"
+  },
+  "red": {
+    "direcciones_ip": [
+      "172.18.0.2"
+    ],
+    "puerto_contenedor": 8000,
+    "puerto_publicado_anfitrion": 8080,
+    "acceso": "http://<IP del anfitrión>:8080 (interfaz) y POST /api/convoluciones"
+  },
+  "repositorio": {
+    "commit_practica03": "HEAD-con-cambios",
+    "commit_origen_practica02": "NO_DECLARADO",
+    "arbol_limpio": false,
+    "estado_porcelain": [
+      "no disponible: [Errno 2] No such file or directory: 'git'"
+    ],
+    "verificacion": "git_status_local",
+    "ruta_practica02": "/opt/practica02"
+  }
+}
