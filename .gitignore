@@ -1,6 +1,9 @@
 # Firmas escaneadas: solo se usan localmente para generar el informe
 GuillenJ_SolanoA_Practica03/informe/recursos/firmas/
 
+# Documentos (informe y capturas): no se suben al repositorio
+docs/
+
 # Entornos virtuales y cachés
 .venv/
 __pycache__/

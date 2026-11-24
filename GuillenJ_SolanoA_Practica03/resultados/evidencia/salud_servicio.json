@@ -1,0 +1,14 @@
+﻿{
+    "estado":  "listo",
+    "gpu":  {
+                "compute_capability":  "8.6",
+                "contexto_creado":  false,
+                "cuda_controlador":  "13.2",
+                "gpu":  "NVIDIA GeForce RTX 3070",
+                "hilos_por_bloque":  256,
+                "kernel":  "/opt/practica02/src/pycuda/kernels/convolucion.cu",
+                "memoria_total_mb":  8191.5,
+                "politica":  "1 trabajador CUDA; máximo 2 solicitudes entre ejecución y espera; el resto recibe HTTP 429",
+                "pycuda":  "2026.1"
+            }
+}

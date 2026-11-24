@@ -1,0 +1,2 @@
+NAME                                        IMAGE                    COMMAND                  SERVICE       CREATED         STATUS                   PORTS
+guillenj_solanoa_practica03-convolucion-1   convolucion-pycuda:p03   "/opt/nvidia/nvidia_…"   convolucion   6 seconds ago   Up 6 seconds (healthy)   0.0.0.0:8080->8000/tcp, [::]:8080->8000/tcp

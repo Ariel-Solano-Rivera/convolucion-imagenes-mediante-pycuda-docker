@@ -1,0 +1,26 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.9.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+[2026-11-24 21:00:01 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2026-11-24 21:00:01 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-11-24 21:00:01 +0000] [1] [INFO] Using worker: gthread
+[2026-11-24 21:00:01 +0000] [25] [INFO] Booting worker with pid: 25
+172.17.0.1 - - [24/Nov/2026:21:00:01 +0000] "GET /api/salud HTTP/1.1" 503 190 "-" "Python-urllib/3.12"
+[2026-11-24 21:00:01,637] ERROR in api: solicitud bf97200d-39b4-45aa-9034-ee5969f727ee: gpu_no_disponible: No se pudo importar PyCUDA o el código de la práctica 02 (¿falta libcuda / el contenedor se inició sin --gpus?): libcuda.so.1: cannot open shared object file: No such file or directory
+172.17.0.1 - - [24/Nov/2026:21:00:01 +0000] "POST /api/convoluciones HTTP/1.1" 503 300 "-" "Python-urllib/3.12"

@@ -1,0 +1,138 @@
+﻿[
+    {
+        "Id": "sha256:d24d2e2657d516c0c41da80100f05578999c8795e66e1cc024ce0004baf28430",
+        "RepoTags": [
+            "convolucion-pycuda:p03"
+        ],
+        "RepoDigests": [
+            "convolucion-pycuda@sha256:d24d2e2657d516c0c41da80100f05578999c8795e66e1cc024ce0004baf28430"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-24T20:56:57.291087413Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 5824978883,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:107cbdaeec042e6154640c94972c638f4e2fee795902b149e8ce9acbd03d59d7",
+                "sha256:d54e805fe9aac70390dd3e3ca1b6fd0f63b2cf5913eb0023bf741bd291d2a746",
+                "sha256:35a8bdbbbf277997b1e1efcbdc9ae5321ec3a96ceb81ad194ad58d671ab47bd4",
+                "sha256:12f5e36b8e7e83c3fa409e1b34eaec072b9381c8a5e600e9f03c53dbd295bec1",
+                "sha256:455bca42f6ec40ca42fea4bea15c6c17b97101af90413cdd25647de2b9d98960",
+                "sha256:6e980015d67b5cae225c0adf06e30b516f62600df02350db433029e63968b932",
+                "sha256:97486d1882c55d529af69661c72297f97dd38801c0dfa771cbbbe649da358078",
+                "sha256:d38a3b5fb295c76c1383bf5f56fa8ede57ce3ad574a6a6918307daab6ae62889",
+                "sha256:3cefe4836f3110ecc622b831aafa0c278feabc23c5aeb8a914f9f90727fcbd1a",
+                "sha256:3a91992f0bb9e54dbdface53427b7bea60d9e32dacef2105f5f15ce7cae11b17",
+                "sha256:9c481f26e4c2227ea8326b5a770905d99fe3770090c01733ca65f36a4b1e920c",
+                "sha256:251a64dddbdf362f0db3d4217ee33d0f1aba8fd79dad6dd84cfa9d0f73191d78",
+                "sha256:d9f6f436b1e150bdaaba8a4640444ea96eb0cb88d26d28d9ee39d42c5b451fac",
+                "sha256:c1aa2ceddafbe5a9ca997b4c5f428298505698ae394aa0bbda48f2eed2f0df04",
+                "sha256:bc43786cbb1475eca2aa116181f37dd47242930744d7c3146a56aec52444a451",
+                "sha256:6955b93122edd64f7003eb4e8207a1c475700ca54dfa9112f2765a7e7105add4",
+                "sha256:abffbc3f749f45ec3fa0d25366c6123c64f7201345e657624aa2de633d32a954",
+                "sha256:c51bd9ade6d7a27beb673b94c4bd7fe75260347761e59268d4402d21afb5b4cd"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-24T20:56:59.266126786Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:d24d2e2657d516c0c41da80100f05578999c8795e66e1cc024ce0004baf28430",
+            "size": 856
+        },
+        "Config": {
+            "ArgsEscaped": true,
+            "Cmd": [
+                "gunicorn",
+                "--bind",
+                "0.0.0.0:8000",
+                "--workers",
+                "1",
+                "--threads",
+                "4",
+                "--timeout",
+                "300",
+                "--access-logfile",
+                "-",
+                "--error-logfile",
+                "-",
+                "servidor:app"
+            ],
+            "Entrypoint": [
+                "/opt/nvidia/nvidia_entrypoint.sh"
+            ],
+            "Env": [
+                "PATH=/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVARCH=x86_64",
+                "NVIDIA_REQUIRE_CUDA=cuda\u003e=12.9 brand=unknown,driver\u003e=535,driver\u003c536 brand=grid,driver\u003e=535,driver\u003c536 brand=tesla,driver\u003e=535,driver\u003c536 brand=nvidia,driver\u003e=535,driver\u003c536 brand=quadro,driver\u003e=535,driver\u003c536 brand=quadrortx,driver\u003e=535,driver\u003c536 brand=nvidiartx,driver\u003e=535,driver\u003c536 brand=vapps,driver\u003e=535,driver\u003c536 brand=vpc,driver\u003e=535,driver\u003c536 brand=vcs,driver\u003e=535,driver\u003c536 brand=vws,driver\u003e=535,driver\u003c536 brand=cloudgaming,driver\u003e=535,driver\u003c536 brand=unknown,driver\u003e=550,driver\u003c551 brand=grid,driver\u003e=550,driver\u003c551 brand=tesla,driver\u003e=550,driver\u003c551 brand=nvidia,driver\u003e=550,driver\u003c551 brand=quadro,driver\u003e=550,driver\u003c551 brand=quadrortx,driver\u003e=550,driver\u003c551 brand=nvidiartx,driver\u003e=550,driver\u003c551 brand=vapps,driver\u003e=550,driver\u003c551 brand=vpc,driver\u003e=550,driver\u003c551 brand=vcs,driver\u003e=550,driver\u003c551 brand=vws,driver\u003e=550,driver\u003c551 brand=cloudgaming,driver\u003e=550,driver\u003c551 brand=unknown,driver\u003e=560,driver\u003c561 brand=grid,driver\u003e=560,driver\u003c561 brand=tesla,driver\u003e=560,driver\u003c561 brand=nvidia,driver\u003e=560,driver\u003c561 brand=quadro,driver\u003e=560,driver\u003c561 brand=quadrortx,driver\u003e=560,driver\u003c561 brand=nvidiartx,driver\u003e=560,driver\u003c561 brand=vapps,driver\u003e=560,driver\u003c561 brand=vpc,driver\u003e=560,driver\u003c561 brand=vcs,driver\u003e=560,driver\u003c561 brand=vws,driver\u003e=560,driver\u003c561 brand=cloudgaming,driver\u003e=560,driver\u003c561 brand=unknown,driver\u003e=565,driver\u003c566 brand=grid,driver\u003e=565,driver\u003c566 brand=tesla,driver\u003e=565,driver\u003c566 brand=nvidia,driver\u003e=565,driver\u003c566 brand=quadro,driver\u003e=565,driver\u003c566 brand=quadrortx,driver\u003e=565,driver\u003c566 brand=nvidiartx,driver\u003e=565,driver\u003c566 brand=vapps,driver\u003e=565,driver\u003c566 brand=vpc,driver\u003e=565,driver\u003c566 brand=vcs,driver\u003e=565,driver\u003c566 brand=vws,driver\u003e=565,driver\u003c566 brand=cloudgaming,driver\u003e=565,driver\u003c566 brand=unknown,driver\u003e=570,driver\u003c571 brand=grid,driver\u003e=570,driver\u003c571 brand=tesla,driver\u003e=570,driver\u003c571 brand=nvidia,driver\u003e=570,driver\u003c571 brand=quadro,driver\u003e=570,driver\u003c571 brand=quadrortx,driver\u003e=570,driver\u003c571 brand=nvidiartx,driver\u003e=570,driver\u003c571 brand=vapps,driver\u003e=570,driver\u003c571 brand=vpc,driver\u003e=570,driver\u003c571 brand=vcs,driver\u003e=570,driver\u003c571 brand=vws,driver\u003e=570,driver\u003c571 brand=cloudgaming,driver\u003e=570,driver\u003c571",
+                "NV_CUDA_CUDART_VERSION=12.9.79-1",
+                "CUDA_VERSION=12.9.1",
+                "LD_LIBRARY_PATH=/usr/local/cuda/lib64",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=compute,utility",
+                "NV_CUDA_LIB_VERSION=12.9.1-1",
+                "NV_NVTX_VERSION=12.9.79-1",
+                "NV_LIBNPP_VERSION=12.4.1.87-1",
+                "NV_LIBNPP_PACKAGE=libnpp-12-9=12.4.1.87-1",
+                "NV_LIBCUSPARSE_VERSION=12.5.10.65-1",
+                "NV_LIBCUBLAS_PACKAGE_NAME=libcublas-12-9",
+                "NV_LIBCUBLAS_VERSION=12.9.1.4-1",
+                "NV_LIBCUBLAS_PACKAGE=libcublas-12-9=12.9.1.4-1",
+                "NV_LIBNCCL_PACKAGE_NAME=libnccl2",
+                "NV_LIBNCCL_PACKAGE_VERSION=2.27.3-1",
+                "NCCL_VERSION=2.27.3-1",
+                "NV_LIBNCCL_PACKAGE=libnccl2=2.27.3-1+cuda12.9",
+                "NVIDIA_PRODUCT_NAME=CUDA",
+                "NV_CUDA_CUDART_DEV_VERSION=12.9.79-1",
+                "NV_NVML_DEV_VERSION=12.9.79-1",
+                "NV_LIBCUSPARSE_DEV_VERSION=12.5.10.65-1",
+                "NV_LIBNPP_DEV_VERSION=12.4.1.87-1",
+                "NV_LIBNPP_DEV_PACKAGE=libnpp-dev-12-9=12.4.1.87-1",
+                "NV_LIBCUBLAS_DEV_VERSION=12.9.1.4-1",
+                "NV_LIBCUBLAS_DEV_PACKAGE_NAME=libcublas-dev-12-9",
+                "NV_LIBCUBLAS_DEV_PACKAGE=libcublas-dev-12-9=12.9.1.4-1",
+                "NV_CUDA_NSIGHT_COMPUTE_VERSION=12.9.1-1",
+                "NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE=cuda-nsight-compute-12-9=12.9.1-1",
+                "NV_NVPROF_VERSION=12.9.79-1",
+                "NV_NVPROF_DEV_PACKAGE=cuda-nvprof-12-9=12.9.79-1",
+                "NV_LIBNCCL_DEV_PACKAGE_NAME=libnccl-dev",
+                "NV_LIBNCCL_DEV_PACKAGE_VERSION=2.27.3-1",
+                "NV_LIBNCCL_DEV_PACKAGE=libnccl-dev=2.27.3-1+cuda12.9",
+                "LIBRARY_PATH=/usr/local/cuda/lib64/stubs",
+                "DEBIAN_FRONTEND=noninteractive",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PRACTICA02_ROOT=/opt/practica02",
+                "COMMIT_PRACTICA03=0b36839b0438f53854e1b136034c108455dac72f"
+            ],
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Labels": {
+                "com.docker.compose.project": "guillenj_solanoa_practica03",
+                "com.docker.compose.service": "convolucion",
+                "com.docker.compose.version": "2.40.0",
+                "maintainer": "NVIDIA CORPORATION \u003ccudatools@nvidia.com\u003e",
+                "org.opencontainers.image.description": "Practica 03: servicio web de convolucion con PyCUDA",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.revision": "0b36839b0438f53854e1b136034c108455dac72f",
+                "org.opencontainers.image.title": "convolucion-pycuda",
+                "org.opencontainers.image.version": "24.04"
+            },
+            "OnBuild": null,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        }
+    }
+]

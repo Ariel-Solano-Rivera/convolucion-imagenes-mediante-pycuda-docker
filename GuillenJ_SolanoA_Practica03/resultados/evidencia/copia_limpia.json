@@ -1,0 +1,10 @@
+﻿{
+    "fecha":  "2026-11-24T16:00:29",
+    "commit_clonado":  "0b36839b0438f53854e1b136034c108455dac72f",
+    "carpeta_copia":  "C:\\Users\\Oficina\\AppData\\Local\\Temp\\p03_copia_limpia",
+    "comando":  "docker build --build-context practica02=\u003ccopia\u003e/GuillenJ_SolanoA_Practica0 --build-arg COMMIT_PRACTICA03=0b36839b0438f53854e1b136034c108455dac72f -t convolucion-pycuda:p03-copia-limpia \u003ccopia\u003e/GuillenJ_SolanoA_Practica03",
+    "codigo_salida":  0,
+    "id_imagen":  "sha256:177032abaf56c0dffd2e8b251951e42184a13ccad49a892cac265afeee67f304",
+    "revision_etiqueta":  "0b36839b0438f53854e1b136034c108455dac72f",
+    "resultado":  "OK"
+}

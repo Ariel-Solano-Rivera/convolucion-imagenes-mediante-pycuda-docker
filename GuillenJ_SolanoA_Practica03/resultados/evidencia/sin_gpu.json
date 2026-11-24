@@ -1,0 +1,20 @@
+{
+  "escenario": "misma imagen Docker iniciada sin --gpus",
+  "salud": {
+    "http": 503,
+    "cuerpo": {
+      "codigo": "gpu_no_disponible",
+      "error": "PyCUDA no puede cargarse (controlador o libcuda ausente): libcuda.so.1: cannot open shared object file: No such file or directory",
+      "estado": "sin_gpu"
+    }
+  },
+  "convolucion": {
+    "http": 503,
+    "cuerpo": {
+      "codigo": "gpu_no_disponible",
+      "error": "No se pudo importar PyCUDA o el código de la práctica 02 (¿falta libcuda / el contenedor se inició sin --gpus?): libcuda.so.1: cannot open shared object file: No such file or directory",
+      "id_solicitud": "bf97200d-39b4-45aa-9034-ee5969f727ee"
+    }
+  },
+  "resultado": "OK"
+}
